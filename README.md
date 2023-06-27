@@ -9,7 +9,10 @@ It became apparent that a more permanent and flexible solution is needed for any
 Structure
 Before submitting please check if an existing folder exists. If not please submit with it at root level. As the number of files increases we will handle sorting these files as needed.
 
-Other
- | - Class Guides
- | - GM Guides
- | - Strategy Guides
+-Other
+
+--- Class Guides
+
+--- GM Guides
+
+--- Strategy Guides
