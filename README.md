@@ -4,7 +4,7 @@ A repository for shared public guides for pathfinder 1e
 Introduction
 As per the discussion here https://www.reddit.com/r/Pathfinder_RPG/comments/14jtcjb/pathfinder_guides_preservation/
 
-It became apparent that a more permanent and flexible solution is needed for any public Pathfinder guides.
+It became apparent that a more permanent and flexible solution is needed for any public Pathfinder guides. The guides here have been publically shared, usually via google drive.
 
 Structure
 Before submitting please check if an existing folder exists. If not please submit with it at root level. As the number of files increases we will handle sorting these files as needed.
@@ -16,3 +16,6 @@ Before submitting please check if an existing folder exists. If not please submi
 --- GM Guides
 
 --- Strategy Guides
+
+Submission guidelines
+Do not submit anything that is not already public/you do not have the rights to submit.
