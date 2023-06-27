@@ -19,3 +19,4 @@ Before submitting please check if an existing folder exists. If not please submi
 
 Submission guidelines
 Do not submit anything that is not already public/you do not have the rights to submit.
+Many folders contain an "_External Links.txt" file to collect links to external sources where permission may not exist to save the file locally. This file is prefixed with an underscore to sort first.
