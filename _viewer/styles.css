@@ -68,6 +68,8 @@ body {
     overflow-y: auto;
     white-space: pre-wrap;
     word-wrap: break-word;
+	height: calc(100vh - 150px);
+    overflow-y: auto;
 }
 
 @keyframes spin {

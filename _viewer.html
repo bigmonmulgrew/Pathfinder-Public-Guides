@@ -4,6 +4,7 @@
     <title>GitHub File Viewer</title>
     <link rel="stylesheet" type="text/css" href="_viewer/styles.css">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	<script src="_viewer/webodf.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
     <h1>GitHub File Viewer</h1>
@@ -14,6 +15,11 @@
     <div id="breadcrumb"></div>
     <div id="file-list"></div>
     <div id="file-viewer"></div>
-    <script src="_viewer/scripts.js"></script>
+	<div id="odf"></div>
+	<button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
+	<script src="_viewer/ui.js"></script>
+	<script src="_viewer/main.js"></script>
+
+
 </body>
 </html>
