@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GitHub File Viewer</title>
+    <link rel="stylesheet" type="text/css" href="_viewer/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <h1>GitHub File Viewer</h1>
+    <div id="top-bar"> <!-- Add this line -->
+        <button onclick="getRepoContents()" id="rootBtn" title="Go to Root">Back to Root</button>
+        <div id="loader" class="loader"></div>
+    </div> <!-- Add this line -->
+    <div id="breadcrumb"></div>
+    <div id="file-list"></div>
+    <div id="file-viewer"></div>
+    <script src="_viewer/scripts.js"></script>
+</body>
+</html>
