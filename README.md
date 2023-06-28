@@ -6,6 +6,9 @@ As per the discussion here https://www.reddit.com/r/Pathfinder_RPG/comments/14jt
 
 It became apparent that a more permanent and flexible solution is needed for any public Pathfinder guides. The guides here have been publically shared, usually via google drive.
 
+Usage
+If you just want to view guides download the release. It contains only the viewer which will pull all files from the repository. The viewer runs locally using a few basic js scripts so shoudl run in most browsers.
+
 Structure
 Before submitting please check if an existing folder exists. If not please submit with it at root level. As the number of files increases we will handle sorting these files as needed.
 
