@@ -81,7 +81,7 @@ function handleResponseData(responseData) {
 function getRepoContents(path = '') {
     currentPath = path;
     document.getElementById('loader').style.display = 'block';
-    axios.get(`https://api.github.com/repos/${repoOwner}/${repoName}/contents/${path}?ref=Building-a-Viewer`)
+    axios.get(`https://api.github.com/repos/${repoOwner}/${repoName}/contents/${path}`)
         .then(function (response) {
             handleResponseData(response.data);
         })
