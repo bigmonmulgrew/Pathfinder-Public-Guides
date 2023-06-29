@@ -1,5 +1,6 @@
 const repoOwner = 'bigmonmulgrew';
 const repoName = 'Pathfinder-Public-Guides';
+const repoBranch = 'main';
 const ignoreFiles = ['.gitattributes', '.gitignore', '_viewer.html', '_viewer'];
 let currentPath = '';
 
@@ -36,7 +37,12 @@ function createFileElement(item) {
 			event.preventDefault();
 			viewODTFile(item.download_url);
 		};
-	}
+	} else if (extension === 'doc' || extension === 'docx') {
+        itemLink.onclick = function (event) {
+            event.preventDefault();
+            viewDOCFile(item.download_url);
+        };
+    }
     itemElement.appendChild(itemLink);
     return itemElement;
 }
@@ -81,7 +87,7 @@ function handleResponseData(responseData) {
 function getRepoContents(path = '') {
     currentPath = path;
     document.getElementById('loader').style.display = 'block';
-    axios.get(`https://api.github.com/repos/${repoOwner}/${repoName}/contents/${path}`)
+    axios.get(`https://api.github.com/repos/${repoOwner}/${repoName}/contents/${path}?ref=${repoBranch}`)
         .then(function (response) {
             handleResponseData(response.data);
         })
@@ -114,6 +120,11 @@ function viewODTFile(url) {
     viewer.appendChild(canvas);
 
 	odfcanvas.load(url);
+}
+
+function viewDOCFile(url) {
+    const viewer = document.getElementById('file-viewer');
+    viewer.innerHTML = `<iframe src="https://docs.google.com/viewer?embedded=true&url=${encodeURIComponent(url)}" width="100%" height="100%"></iframe>`;
 }
 
 getRepoContents();
