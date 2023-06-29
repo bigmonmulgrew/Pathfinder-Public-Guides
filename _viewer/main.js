@@ -1,5 +1,6 @@
 const repoOwner = 'bigmonmulgrew';
 const repoName = 'Pathfinder-Public-Guides';
+const repoBranch = 'main';
 const ignoreFiles = ['.gitattributes', '.gitignore', '_viewer.html', '_viewer'];
 let currentPath = '';
 
@@ -86,7 +87,7 @@ function handleResponseData(responseData) {
 function getRepoContents(path = '') {
     currentPath = path;
     document.getElementById('loader').style.display = 'block';
-    axios.get(`https://api.github.com/repos/${repoOwner}/${repoName}/contents/${path}?branch=Adding-Fighter-and-docx`)
+    axios.get(`https://api.github.com/repos/${repoOwner}/${repoName}/contents/${path}?ref=${repoBranch}`)
         .then(function (response) {
             handleResponseData(response.data);
         })
