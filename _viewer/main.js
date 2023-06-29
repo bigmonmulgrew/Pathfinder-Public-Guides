@@ -1,8 +1,8 @@
-const repoOwner = 'bigmonmulgrew';
-const repoName = 'Pathfinder-Public-Guides';
-const repoBranch = 'main';
+const repoOwner   = 'bigmonmulgrew';
+const repoName    = 'Pathfinder-Public-Guides';
+const repoBranch  = 'main';
 const ignoreFiles = ['.gitattributes', '.gitignore', '_viewer.html', '_viewer'];
-let currentPath = '';
+let currentPath   = '';
 
 function createBreadcrumbElement(part, currentPathPart, index, partsLength) {
     const partElement = document.createElement('span');
@@ -41,6 +41,11 @@ function createFileElement(item) {
         itemLink.onclick = function (event) {
             event.preventDefault();
             viewDOCFile(item.download_url);
+        };
+    } else if (extension === 'rtf') {
+        itemLink.onclick = function (event) {
+            event.preventDefault();
+            viewRTFFile(item.download_url);
         };
     }
     itemElement.appendChild(itemLink);
@@ -123,6 +128,11 @@ function viewODTFile(url) {
 }
 
 function viewDOCFile(url) {
+    const viewer = document.getElementById('file-viewer');
+    viewer.innerHTML = `<iframe src="https://docs.google.com/viewer?embedded=true&url=${encodeURIComponent(url)}" width="100%" height="100%"></iframe>`;
+}
+
+function viewRTFFile(url) {
     const viewer = document.getElementById('file-viewer');
     viewer.innerHTML = `<iframe src="https://docs.google.com/viewer?embedded=true&url=${encodeURIComponent(url)}" width="100%" height="100%"></iframe>`;
 }
